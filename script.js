@@ -1,3 +1,15 @@
+const preloadImages = [
+"background.jpg",
+"puzzle1.jpg",
+"puzzle2.jpg",
+"puzzle3.jpg"
+]
+
+preloadImages.forEach(src => {
+const img = new Image()
+img.src = src
+})
+
 let level = 0
 
 let puzzles = [
