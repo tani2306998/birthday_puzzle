@@ -1,9 +1,9 @@
 let level = 0
 
 let puzzles = [
-"images/puzzle1.jpg",
-"images/puzzle2.jpg",
-"images/puzzle3.jpg"
+"./images/puzzle1.jpg",
+"./images/puzzle2.jpg",
+"./images/puzzle3.jpg"
 ]
 
 let messages = [
