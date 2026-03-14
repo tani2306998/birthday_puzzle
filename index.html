@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amma Birthday Puzzle</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="overlay"></div>
+
+<audio id="birthdayMusic" loop>
+<source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<!-- START PAGE -->
+
+<div id="start-screen" class="screen">
+
+<div class="card">
+
+<h1>Amma's 50th Birthday</h1>
+<p>Tap the gift to begin</p>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+</div>
+
+</div>
+
+
+
+<!-- INTRO PAGE -->
+
+<div id="intro-screen" class="screen hidden">
+
+<div class="card">
+
+<h1>✨ Surprise!</h1>
+
+<p>A small birthday challenge awaits...</p>
+
+<button onclick="showPage('instructions-screen')">Start Game</button>
+
+</div>
+
+</div>
+
+<!-- INSTRUCTIONS PAGE -->
+<div id="instructions-screen" class="screen hidden">
+
+    <div class="card">
+    
+    <h2>🎮 How to Play</h2>
+    
+    <p>
+    Tap tiles to move them into the empty space.<br><br>
+    Arrange the tiles to complete the photo.<br><br>
+    If it gets tricky, tap <b>🔀 Shuffle Again</b> to reshuffle the puzzle.<br><br>
+    Finish all puzzles to unlock the birthday surprise 🎁
+    </p>
+    
+    <button onclick="startGame()">Start Puzzle</button>
+    
+    </div>
+    
+</div>
+
+
+
+<!-- PUZZLE PAGE -->
+
+<div id="game" class="screen hidden">
+
+<div class="card">
+
+<h2 id="level-title"></h2>
+
+<p>Time: <span id="timer">0</span>s</p>
+
+<div id="puzzle-container"></div>
+
+<p id="puzzle-message"></p>
+
+<button onclick="shuffleAgain()">🔄 Shuffle Again</button>
+
+<button id="nextBtn" onclick="nextPuzzle()" style="display:none">
+Next Puzzle
+</button>
+
+</div>
+
+</div>
+
+<div id="reveal-screen" class="screen hidden">
+
+    <div class="card">
+    
+    <h2 id="reveal-title"></h2>
+    
+    <img id="reveal-image" class="reveal-img">
+
+    <p id="reveal-time"></p>
+    
+    <p id="reveal-message"></p>
+    
+    <button onclick="continueGame()">Continue</button>
+    
+    </div>
+    
+    </div>
+
+
+
+<!-- CONGRATULATIONS PAGE -->
+
+<div id="end-screen" class="screen hidden">
+
+<div class="card">
+
+<h1>🎉 Puzzle Completed!</h1>
+
+<p>Congratulations 🎉</p>
+
+<p>You solved all the puzzles.</p>
+
+<p>Now the real reward:</p>
+
+<h2>Turning 50 😉</h2>
+
+<h2>Happy Birthday Amma 🎂</h2>
+
+<div id="candles">
+<span class="candle">🕯</span>
+<span class="candle">🕯</span>
+<span class="candle">🕯</span>
+</div>
+
+<div id="cake" onclick="blowCandles()">🎂</div>
+
+<p id="cakeText">Tap the cake to blow the candles</p>
+
+</div>
+
+</div>
+
+
+
+<!-- BONUS PAGE -->
+
+<div id="bonus-screen" class="screen hidden">
+
+<div class="card">
+
+<h1>🎁 Bonus Reward Unlocked</h1>
+
+<p>You completed the Birthday Puzzle Game 🧩</p>
+
+<h2>Your surprise gift is on the way...</h2>
+
+<p>Something special should arrive soon 👀</p>
+
+<h3>Happy 50th Birthday Amma 💐</h3>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
